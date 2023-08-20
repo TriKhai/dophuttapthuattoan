@@ -18,9 +18,9 @@ long int s2 (int n, int r) {
 long int s3 (int n, int r) {
     long int s = 1, t = 1;
     for( int i = 1; i <= n ; i++){
-                    t *= r;
-                    s += t;
-                }
+       t *= r;
+       s += t;
+    }
     return s;
 }
 
