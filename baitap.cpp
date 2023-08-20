@@ -2,21 +2,21 @@
 #include "math.h"
 
 //O(nlogn)
-long s1 (int n, int r) {
-	long s = 0;
+long int s1 (int n, int r) {
+	long int s = 0;
 	for (int i = 0; i <= n; i++)
 		s += pow(r, i);
 	return s;
 }
 
 //O(logn)
-long s2 (int n, int r) {
+long int s2 (int n, int r) {
     return (pow(r, n+1) - 1)/(r-1);
 }
 
 //O(n)
-long s3 (int n, int r) {
-    long s = 1, t = 1;
+long int s3 (int n, int r) {
+    long int s = 1, t = 1;
     for( int i = 1; i <= n ; i++){
                     t *= r;
                     s += t;
@@ -25,10 +25,10 @@ long s3 (int n, int r) {
 }
 
 // //O(n^2)
-// long s4 (int n, int r) {
-//     long s = 0;
+// long int s4 (int n, int r) {
+//     long int s = 0;
 //     for( int i = 0; i <= n ; i++){
-//         long t = 1;
+//         long int t = 1;
 //         for( int j = 0; j < i; j++){
 //             t *= r;
 //         }
@@ -38,8 +38,8 @@ long s3 (int n, int r) {
 // }
 
 //O(n^2)
-long s4 (int n, int r) {
-    long s = 0, t = 1;
+long int s4 (int n, int r) {
+    long int s = 0, t = 1;
     for( int i = 0; i <= n ; i++){
         for( int j = 0; j < i; j++){
             t *= r;
